@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 import List from '../components/List'
@@ -45,5 +46,3 @@ class NavBar extends Component { // name your components with an uppercase lette
 }
 
 export default NavBar;
-
-
