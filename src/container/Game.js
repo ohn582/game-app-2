@@ -16,20 +16,42 @@ class Game extends Component {
 
     constructor(props) { 
         super(props);   
-        this.state = {  
+        this.state = { 
             game: []
         };
     }
 
+    sortClick = () => {
+        this.setState({game: !this.state.game})
+    }
 
     render() {
         const games = this.props.games.map((game, i) => <GameItem key={i} game={game} />)
 
+        if (this.state.tetris === true){
+            const tetrisGame = this.props.games.filter(game => game.title === "Tetris")
+            games = tetrisGame.map((game, i) => <GameItem key={i} game={game} />)
+        }
 
+        const gameSort = this.props.game
+        .sort(function (a, b) {
+            if (a.title.toLowerCase() < b.title.toLowerCase()) return -1;
+            if (a.title.toLowerCase() > b.title.toLowerCase()) return 1;
+        })
 
+        if (this.state.game === true) {
+            gameSort.map((game, i) => <GameItem key={i} game={game} />)
+        }
+
+     
         // debugger
         return (
             <div>
+                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Sort</button>
+                <form className="form-inline my-2 my-lg-0">
+                    <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" onChange={this.editSearchTerm}/>
+                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
                 <div className="wrapper">{games}</div>
                 <Form handleOnSubmit={this.addNewTodo} />
             </div>

@@ -6691,8 +6691,11 @@ __metadata:
     "@testing-library/react": ^9.3.2
     "@testing-library/user-event": ^7.1.2
     bootstrap: ^4.5.2
+    jquery: ^3.5.1
+    popper.js: ^1.16.1
     react: ^16.13.1
     react-dom: ^16.13.1
+    react-filter-search: ^1.0.11
     react-redux: ^7.2.0
     react-router-dom: ^5.2.0
     react-scripts: ^3.4.3
@@ -8634,6 +8637,13 @@ fsevents@^1.2.7:
   bin:
     jest: ./bin/jest.js
   checksum: 7627bb82070ea116008cab807b77d25b088057e008a02f1ba1bdeb32b5e6bd02ecb66dd9afd43772bc859ee4d169afc24a0bd75f3973b6929598ef3f49642f31
+  languageName: node
+  linkType: hard
+
+"jquery@npm:^3.5.1":
+  version: 3.5.1
+  resolution: "jquery@npm:3.5.1"
+  checksum: 382ba69b687aed6e0b5e63eb1544bd78b9e2b5e1d54281a835a9811bcb678ed5c00815966d3769c25a665ec227975d43cc7d54e3d7fd4caf043c0535a9dbbc20
   languageName: node
   linkType: hard
 
@@ -10837,6 +10847,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"popper.js@npm:^1.16.1":
+  version: 1.16.1
+  resolution: "popper.js@npm:1.16.1"
+  checksum: 2bee5c5dd2db53b27b540093b292745880b31453d91722e216814f1aa42bb07ec83ae2d0a0b43521b8f47be46a41499b79e6685bdeee43327d445c92b03892ae
+  languageName: node
+  linkType: hard
+
 "portfinder@npm:^1.0.26":
   version: 1.0.28
   resolution: "portfinder@npm:1.0.28"
@@ -12056,6 +12073,15 @@ fsevents@^1.2.7:
   version: 6.0.7
   resolution: "react-error-overlay@npm:6.0.7"
   checksum: aa7806f795d6dc973d302515bb6dec89f678cdfd404e0b1da0651f471fadba64b83944b70b4b8d8e184ad249b09633878bba389904c72e37026bcca049c446f2
+  languageName: node
+  linkType: hard
+
+"react-filter-search@npm:^1.0.11":
+  version: 1.0.11
+  resolution: "react-filter-search@npm:1.0.11"
+  peerDependencies:
+    react: 16.x
+  checksum: 9d37c9e1f35ccc856f371f829bf327a55c7437f5295cdbcc875832fc187dd08dc6c161358f74e47e57b789bd7db55d9dc487589aa2327846ce0adbce71a63873
   languageName: node
   linkType: hard
 
