@@ -26,28 +26,28 @@ class Game extends Component {
     }
 
     render() {
-        const games = this.props.games.map((game, i) => <GameItem key={i} game={game} />)
+        // const games = this.props.games.map((game, i) => <GameItem key={i} game={game} />)
+        let games = this.props.games.map((game, i) => <GameItem key={i} game={game} />)
 
         if (this.state.tetris === true){
             const tetrisGame = this.props.games.filter(game => game.title === "Tetris")
             games = tetrisGame.map((game, i) => <GameItem key={i} game={game} />)
         }
 
-        const gameSort = this.props.game
-        .sort(function (a, b) {
-            if (a.title.toLowerCase() < b.title.toLowerCase()) return -1;
-            if (a.title.toLowerCase() > b.title.toLowerCase()) return 1;
-        })
+        // const gameSort = this.props.game.sort(function (a, b) {
+        //     if (a.title.toLowerCase() < b.title.toLowerCase()) return -1;
+        //     if (a.title.toLowerCase() > b.title.toLowerCase()) return 1;
+        // })
 
-        if (this.state.game === true) {
-            gameSort.map((game, i) => <GameItem key={i} game={game} />)
-        }
+        // if (this.state.game === true) {
+        //     gameSort.map((game, i) => <GameItem key={i} game={game} />)
+        // }
 
      
         // debugger
         return (
             <div>
-                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Sort</button>
+                <button className="btn btn-outline-success my-2 my-sm-0" onClick={this.sortClick}>Sort</button>
                 <form className="form-inline my-2 my-lg-0">
                     <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" onChange={this.editSearchTerm}/>
                     <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
