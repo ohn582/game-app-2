@@ -30,6 +30,12 @@ class NavBar extends Component { // name your components with an uppercase lette
                                         <a className="dropdown-item" href="#">Go to list</a>
                                         <div className="dropdown-divider"></div>
                                         <a className="dropdown-item" href="#">Go to about</a>
+
+                                        {/* <Route className="dropdown-item" href="/markets" component={List} />
+                                        <Link to="/markets" className='list'>Go to List</Link>
+                                        <br />
+                                        <Route className="dropdown-item" href="http://localhost:3001/about#" component={About} />
+                                        <Link to="/about" className='list'>Go to About</Link> */}
                                     </Router>
                                 </div>
                             </li>

@@ -6,7 +6,6 @@ class List extends Component {
     render() {
         return (
             <div>
-                <h1>Select:</h1>
                 <Game />
             </div>
         )
