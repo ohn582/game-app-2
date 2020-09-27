@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import { connect } from 'react-redux'
@@ -22,14 +21,14 @@ class GameItem extends Component {
     }
 
     render() {
-        const games = this.props.game
+        const gam = this.props.game
         return (
             <Router>
                 <>
                     <div className='box'>
-                        <h4>{games.id}: {games.title}</h4>
-                        <Route path={`/games/${games.id}`}>
-                            {games.info}
+                        <h4>{gam.id}: {gam.title}</h4>
+                        <Route path={`/games/${gam.id}`}>
+                            {gam.info}
                             <br />
                             <Link to={`/games`}><button className='close'>Close</button></Link>
                         </Route>
@@ -37,21 +36,21 @@ class GameItem extends Component {
                         <p>Like</p>{this.state.counter}
 
 
-                        <Route path={`/developers/${games.id}`}>
-                            <li className='fruit-header'>{games.developer}</li>
+                        <Route path={`/developers/${gam.id}`}>
+                            <li className='fruit-header'>{gam.developer}</li>
                             <br />
                             <Link to={`/games`}><button className='close'>Close</button></Link>
                         </Route>
 
 
                         <br />
-                        <Link to={`/games/${games.id}`}><button className='info'>info</button></Link>
-                        <Link to={`/developers/${games.id}`}><button className='fruits'>Developer</button></Link>
+                        <Link to={`/games/${gam.id}`}><button className='info'>info</button></Link>
+                        <Link to={`/developers/${gam.id}`}><button className='fruits'>Developer</button></Link>
 
 
-                        <Route path={`/reviews/${games.id}`} component={Review} />
-                        <Link to={`/reviews/${games.id}`}><button className='review'>Review</button></Link>
-                        <button onClick={() => removeGame(games.id)} className='clear'>Delete</button>
+                        <Route path={`/reviews/${gam.id}`} component={Review} />
+                        <Link to={`/reviews/${gam.id}`}><button className='review'>Review</button></Link>
+                        <button onClick={() => this.props.removeGame(gam.id)} className='clear'>Delete</button>
                         <Link to={`/games`}><button className='er'>Exit Review</button></Link>
 
                         <button className='er' onClick={this.handleClickCounter}>Like</button>

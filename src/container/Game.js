@@ -17,7 +17,8 @@ class Game extends Component {
     constructor(props) { 
         super(props);   
         this.state = { 
-            game: []
+            game: [],
+            title: ""
         };
     }
 
@@ -29,8 +30,8 @@ class Game extends Component {
         // const games = this.props.games.map((game, i) => <GameItem key={i} game={game} />)
         let games = this.props.games.map((game, i) => <GameItem key={i} game={game} />)
 
-        if (this.state.tetris === true){
-            const tetrisGame = this.props.games.filter(game => game.title === "Tetris")
+        if (this.state.title === true){
+            const tetrisGame = this.props.games.filter(game => game.title === game.title)
             games = tetrisGame.map((game, i) => <GameItem key={i} game={game} />)
         }
 
