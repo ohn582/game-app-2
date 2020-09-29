@@ -7,7 +7,7 @@ import { fetchGames } from '../actions/index'
 
 
 // import { addNewTodo } from '../actions/index'
-
+// debugger
 class Game extends Component {
 
     componentDidMount() {
@@ -31,7 +31,8 @@ class Game extends Component {
         let games = this.props.games.map((game, i) => <GameItem key={i} game={game} />)
 
         if (this.state.title === true){
-            const tetrisGame = this.props.games.filter(game => game.title === "tetris")
+            // const tetrisGame = this.props.games.filter(game => game.title === "tetris")
+            const tetrisGame = this.props.games.filter(game => game.title)
             games = tetrisGame.map((game, i) => <GameItem key={i} game={game} />)
         }
 
