@@ -18,7 +18,7 @@ class Game extends Component {
         super(props);   
         this.state = { 
             game: [],
-            title: ""
+            title: []
         };
     }
 
@@ -31,18 +31,19 @@ class Game extends Component {
         let games = this.props.games.map((game, i) => <GameItem key={i} game={game} />)
 
         if (this.state.title === true){
-            const tetrisGame = this.props.games.filter(game => game.title === game.title)
+            const tetrisGame = this.props.games.filter(game => game.title === "tetris")
             games = tetrisGame.map((game, i) => <GameItem key={i} game={game} />)
         }
 
-        // const gameSort = this.props.game.sort(function (a, b) {
-        //     if (a.title.toLowerCase() < b.title.toLowerCase()) return -1;
-        //     if (a.title.toLowerCase() > b.title.toLowerCase()) return 1;
-        // })
+        const gameSort = this.props.game.sort(function (a, b) {
+            if (a.title.toLowerCase() < b.title.toLowerCase()) return -1;
+            if (a.title.toLowerCase() > b.title.toLowerCase()) return 1;
+            return 0;
+        })
 
-        // if (this.state.game === true) {
-        //     gameSort.map((game, i) => <GameItem key={i} game={game} />)
-        // }
+        if (this.state.game === true) {
+            gameSort.map((game, i) => <GameItem key={i} game={game} />)
+        }
 
      
         // debugger
