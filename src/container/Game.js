@@ -46,7 +46,7 @@ class Game extends Component {
             gameSort.map((game, i) => <GameItem key={i} game={game} />)
         }
 
-     
+     //
         // debugger
         return (
             <div>
