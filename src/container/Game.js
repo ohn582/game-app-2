@@ -32,7 +32,7 @@ class Game extends Component {
 
         if (this.state.title === true){
             // const tetrisGame = this.props.games.filter(game => game.title === "tetris")
-            const tetrisGame = this.props.games.filter(game => game.title)
+            const tetrisGame = this.props.games.filter(game => game.title === gameSort)
             games = tetrisGame.map((game, i) => <GameItem key={i} game={game} />)
         }
 
@@ -42,7 +42,7 @@ class Game extends Component {
             return 0;
         })
 
-        if (this.state.game === true) {
+        if (this.state.title === true) {
             gameSort.map((game, i) => <GameItem key={i} game={game} />)
         }
 
