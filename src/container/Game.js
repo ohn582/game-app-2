@@ -45,7 +45,7 @@ class Game extends Component {
         if (this.state.title === true) {
             gameSort.map((game, i) => <GameItem key={i} game={game} />)
         }
-//
+
         // debugger
         return (
             <div>
